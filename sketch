@@ -1,0 +1,21 @@
+const int buttonPin = 2;  // Pin del botón
+const int buzzerPin = 3;  // Pin del buzzer
+const int ledPin = 4;     // Pin del LED
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP); // Configura el botón con pull-up interno
+  pinMode(buzzerPin, OUTPUT);       // Configura el buzzer como salida
+  pinMode(ledPin, OUTPUT);          // Configura el LED como salida
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin); // Lee el estado del botón
+
+  if (buttonState == LOW) { // Si el botón está presionado
+    tone(buzzerPin, 1000);  // Suena el buzzer a 1000 Hz
+    digitalWrite(ledPin, HIGH); // Enciende el LED
+  } else {
+    noTone(buzzerPin);       // Apaga el buzzer
+    digitalWrite(ledPin, LOW); // Apaga el LED
+  }
+}
