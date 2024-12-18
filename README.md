@@ -1,4 +1,4 @@
 # Proyecto-telegrafo-arduino
 ## Descripción
-Primer proyecto personal
+<p>Primer proyecto personal</p>
 Circuito que simula el sonido de un telegrafo
